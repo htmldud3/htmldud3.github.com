@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>All the photos i have of platypi</title>
+        <style>
+            body{
+                background-color: rgb(236, 83, 12);
+            }
+            img{
+                border: 15px solid rgb(233, 229, 221);
+            }
+        </style>
+    </head>
+    <body>
+     <h1>Click through to see some cool photos of the weirdest mammal : The Platypus!
+    
+    <div class="image">
+    
+        <button type="button" id="prev">Prev </button>
+    
+        <img id="slide" src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2016_10/1009116/today-platypus-twins-tease-160311.jpg" width="400" alt="Mushrooms">
+    
+        <button type="button" id="next">Next</button>
+    
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+    <script>
+        
+        //images for slideshow
+        var images = ["https://media-cldnry.s-nbcnews.com/image/upload/newscms/2016_10/1009116/today-platypus-twins-tease-160311.jpg", 
+            'https://www.thoughtco.com/thmb/0WDw6IRpBeBQkh1Dc7ketpa-4EU=/1836x1377/smart/filters:no_upscale()/GettyImages-635477020-14202280a8714a179f5850decf0d254e.jpg', 
+            'https://i.natgeofe.com/k/eaa6bca3-beef-4238-a5b4-f1908bd27f3d/platypus-diving_3x4.jpg',
+            'https://cdn.mos.cms.futurecdn.net/2Edp3ahxzPBhjqqJ5WzbRL.jpg',
+            'https://i.cbc.ca/1.5942538.1615313234!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_940/1305009125.jpg',
+            "https://i.imgflip.com/19mopg.jpg",
+            "https://a-z-animals.com/media/2021/02/Platypus-2.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbB9oXkBsAw1z1lNMOvoHKagHFVJY82iu0dg&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIh-fOAoAsRt7m9lFD8CDjzAfDUAhxNEvQ-w&usqp=CAU",
+            "https://cdn.myminifactory.com/assets/object-assets/5ea485b8ed019/images/720X720-img-20200425-195939.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIsB6tstfbQ1taPKXyrzldVJjzE3ArEbvdQ&usqp=CAU",
+         ]
+        
+
+         //var for slide count
+        var slide = 0;
+        
+        //show images
+        $(".image img").hide();
+        $(".image img").fadeIn(1200);
+        //function for changing slides
+        $('#next').on('click', function() {
+            if (slide != (images.length - 1)) {
+                $("img").hide()
+                $('img').attr('src', images[slide+1])
+                $("img").fadeIn(1000)
+                slide++;
+            }
+        })
+        //function for changing slides
+        $('#prev').on('click', function() {
+            if (slide != 0) {
+                $("img").hide()
+                $("img").attr('src', images[slide-3])
+                $("img").fadeIn(1200)
+                slide--;
+            }
+        })
+        
+    </script> 
+    <h2>click to go back home.</h2>
+    <a href = "index.html">Back to the home.</a>
+    </body>
+</html>

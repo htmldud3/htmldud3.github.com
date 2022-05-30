@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clicking that platypus.</title>
+
+        
+    </head>
+    <body>
+    
+    <h1>Click that Platypus!</h1>
+    
+    <img id="plat" src="https://www.nhm.ac.uk/content/dam/nhmwww/discover/platypus-puzzle/platypus-full-width.jpg" width="300" x = "200" y = "200">
+    <img id="plat2" src="https://www.biographic.com/wp-content/uploads/2019/10/12-8-18_01614265.jpg" width="300">
+    
+    <div id="results"></div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    //click holder variable
+    var numClicks = 0;
+    //2cnd click holder variable
+    var twonumClicks = 0;
+    //first line of clicking function for first image
+        $("#plat").on("click", function() {
+            numClicks+=1;
+            $("#results").text("You clicked " +  numClicks + " times");
+        });
+
+
+        //second line of clicking function for the second image
+        $("#plat2").on("click", function() {
+            twonumClicks+=1;
+            $("#results").text("badda bea " +  
+            twonumClicks + " badda boo ah's");
+        });
+
+        //end of javacode
+    </script>
+    <p>How many times can you click these Platypi? click until you have extreme Carpal tunnel syndrome and then some more!</p>
+    <h2>click to go back home.</h2>
+    <a href = "index.html">Back to the home.</a>
+    </body>
+</html>

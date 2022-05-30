@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Give the Platypus tattoo's!</title>
+        <style>
+            .dot {
+                border-radius: 10px;
+                background: black;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Give the Platypus tattoo's!</h1>
+    <img id="plat-pic" src="https://live-production.wcms.abc-cdn.net.au/ad937752036c9f3aae1659f8fda8d796?impolicy=wcms_crop_resize&cropH=1638&cropW=2460&xPos=411&yPos=342&width=862&height=575" width="500" alt="White dog">
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    //function for dots
+    $("#plat-pic").on("click", function(event) {
+        var $dot = $("<div></div>");
+        $dot.addClass("dot");
+        $dot.appendTo("body");
+        $dot.css("top", event.pageY + "px")
+        $dot.css("left", event.pageX + "px")
+    });
+    </script>
+    <p>How many dot's can be put onto this Platypi? only you can find out!</p>
+    
+    <h2>click to go back home.</h2>
+    <a href = "index.html">Back to the home.</a>
+    </body>
+</html>

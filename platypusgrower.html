@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Make those platypus adult's!</title>
+        <style>
+            #mustache-pic {
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+    <h1>Make those baby platypi into adults!</h1>
+        <img id="patty" src="https://www.snopes.com/tachyon/2016/08/3943667382_a851db711b_z.jpg" width="300" alt="platypus photo" width="500" 
+        length="500">
+        
+        <img id="mustache-pic" src="https://www.kasandbox.org/programming-images/misc/mustache.png" alt="mustache" width="100">
+        
+        <script>
+            
+            //variable for plattypus
+            var patPic = document.getElementById("patty");
+            
+            //function for mustache placement
+            var onpatClick = function(e) {
+                var stashePic = document.getElementById("mustache-pic");  
+                stashePic.style.top = (e.clientY -21) + "px";
+                stashePic.style.left = (e.clientX -21) + "px";
+            };
+            patPic.addEventListener("click", onpatClick);
+            
+        </script>
+       <p>Give one of these platypi a mustache to turn them from a baby to an adult!</p>
+       
+       
+       <h2>click to go back home.</h2>
+        <a href = "index.html">Back to the home.</a>
+    </body>
+</html>
